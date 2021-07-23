@@ -1,0 +1,60 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:@typescript-eslint/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 12,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "@typescript-eslint"
+    ],
+    "rules": {
+        "curly": "off",
+        "quotes": ["error", "double"],
+        "no-inferrable-types": "off",
+        "react/no-unescaped-entities": "off",
+        "no-console": "off",
+        "indent": ["error", 2, {
+            "MemberExpression": 1,
+            "ArrayExpression": 1, 
+            "ObjectExpression": 1,
+            "ImportDeclaration": 1
+        }],
+        "no-multi-spaces": "error",
+        "array-bracket-newline": ["error", "always"],
+        "comma-spacing": ["error", { "before": false, "after": true }],
+        "no-trailing-spaces": "error",
+        "object-curly-newline": ["error", { "consistent": true, "minProperties": 2 }],
+        "semi": ["error", "always"],
+        "key-spacing": [ "error", { "beforeColon": false, "afterColon": true } ],
+        "object-curly-spacing": [ "error", "always" ],
+        "object-property-newline": [ "error", {"allowAllPropertiesOnSameLine": false} ],
+        "padded-blocks": ["error", "never"],
+        "padding-line-between-statements": ["error", { "blankLine": "always", "prev": "*", "next": "return" }],
+        "space-before-blocks": ["error", {"functions": "always", "classes": "always"}],
+        "no-duplicate-imports": "error",
+        "react/display-name": "off",
+        "react/no-array-index-key": "error",
+        "react/jsx-first-prop-new-line": ["error", "multiline"],
+        "react/jsx-props-no-multi-spaces": "error",
+        "react/jsx-indent": [2, 2, {"checkAttributes": false, "indentLogicalExpressions": true}],
+        "react/jsx-indent-props": [2, 2],
+        "react/jsx-curly-newline": [2, {"multiline": "consistent", "singleline": "consistent"}],
+        "react/jsx-equals-spacing": ["error", "never"],
+        "react/jsx-key": "off",
+        "@typescript-eslint/explicit-module-boundary-types": "off",
+        "@typescript-eslint/no-non-null-assertion": "off"
+    }
+}

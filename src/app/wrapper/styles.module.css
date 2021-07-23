@@ -1,0 +1,69 @@
+.wrapper {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    user-select: none;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 30px;
+    background: cornflowerblue;
+    border: black 1px solid;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background: cadetblue;
+    border: black 1px solid;
+    border-top: none;
+}
+
+.resizableHandler {
+    position: absolute;
+    margin: 5px;
+    bottom: 0;
+    right: 0;
+    width: 5px;
+    height: 5px;
+    border-bottom: 3px black solid;
+    border-right: 3px black solid;
+    cursor: nw-resize;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.closeButton {
+    background: inherit;
+    border: none;
+    width: 20px;
+    height: 20px;
+    margin-right: 11px;
+    cursor: pointer;
+}
+
+.headerTitle {
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+}
+
+.rollUp {
+    width: 10px;
+    height: 15px;
+    margin-bottom: 4px;
+    border-bottom: 3px black solid;
+    cursor: pointer;
+}
