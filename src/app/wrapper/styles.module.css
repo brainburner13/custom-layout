@@ -16,6 +16,7 @@
 }
 
 .content {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -24,18 +25,23 @@
     background: cadetblue;
     border: black 1px solid;
     border-top: none;
+    overflow: auto;
 }
 
 .resizableHandler {
     position: absolute;
-    margin: 5px;
+    padding: 3px;
+    margin: 10px;
     bottom: 0;
     right: 0;
-    width: 5px;
-    height: 5px;
+    width: 7px;
+    height: 7px;
+    cursor: nw-resize;
+}
+
+.content:hover .resizableHandler {
     border-bottom: 3px black solid;
     border-right: 3px black solid;
-    cursor: nw-resize;
 }
 
 .buttons {

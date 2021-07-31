@@ -130,12 +130,18 @@ export const layoutSlice = createSlice({
       const touchedElement = state.elements[touchedElementIndex];
       const totalElements = state.elements.length;
 
-      state.elements.map((el) => {
-        if (el.title === touchedElement.title) {
-          return el.zIndex = totalElements;
-        } else {
-          return el.zIndex = el.zIndex - 1;
+      state.elements.map((e) => {
+        let zIndex = 1;
+
+        if (e.title === touchedElement.title) {
+          e.zIndex = totalElements + 1;
+        } else if (e.title !== touchedElement.title && e.zIndex === totalElements + 1) {
+          e.zIndex -= zIndex;
         }
+
+        zIndex += 1;
+
+        return e;
       });
     },
     removeElement: (state: LayoutState, action: PayloadAction<{ title: string }>) => {

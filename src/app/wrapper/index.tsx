@@ -1,6 +1,7 @@
 import React, {
   MutableRefObject,
   ReactNode,
+  useEffect,
   useRef,
   useState,
 } from "react";
@@ -66,6 +67,25 @@ const Wrapper = ({
 
   const elementWidth = elements.find((el) => el.title === title)?.size.width;
   const elementHeight = elements.find((el) => el.title === title)?.size.height;
+
+  // Setting the initial positions of the elements
+  useEffect(() => {
+    if (resizableElement.current) {
+      updateElementPosition(
+        {
+          x: [
+            resizableElement.current.getBoundingClientRect().left,
+            resizableElement.current.getBoundingClientRect().right,
+          ],
+          y: [
+            resizableElement.current.getBoundingClientRect().top,
+            resizableElement.current.getBoundingClientRect().bottom,
+          ],
+        },
+      );
+    }
+  }, [
+  ]);
 
   const [
     elemPos, setElemPos
